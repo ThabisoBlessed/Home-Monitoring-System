@@ -1,5 +1,5 @@
 # Home-Monitoring-System
-An IOT raspberry pi  project  built using python /flask ,car  drone controlled  by a website remotely , 
+An IOT raspberry pi  project  built using python /flask ,car  drone controlled  by a website remotely , intergrated with a chat application built using Flask socketio
 
 Materials
 
