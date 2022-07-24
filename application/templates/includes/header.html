@@ -1,0 +1,31 @@
+<header  >
+    <!-- Nav Bar -->
+
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-white">
+  
+        <a class="navbar-brand" href="{{ url_for('index') }}"><img class="logo_img" src="{{ url_for('static',filename ='images/a.png')}}" alt=""> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class=" navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a  class="nav nav-link" href="{{ url_for('index') }}">HOME</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav nav-link" href="#why-us ">WHY US</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav nav-link" href="{{ url_for('register') }}">REGISTER</a>
+              </li>
+               <li class="nav-item">
+                   <a href="{{ url_for('login') }}" class="login-btn "><b>LOG IN</b></a>
+              </li>
+
+          </ul>
+        </div>
+    </nav>
+
+   </header>
+

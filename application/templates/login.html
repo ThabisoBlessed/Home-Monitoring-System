@@ -1,0 +1,63 @@
+<html>
+<head>
+  <title>Home Monitoring System</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename ='css/bootstrap.css')}}" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{{ url_for('static',filename ='images/favicon.ico')}}" >
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename ='css/test.css')}}"/>
+
+</head>
+
+<body>
+  <div class="containr">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{category}}">
+        <p>{{ message }}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <div class="main">
+      <div class="left">
+        <h3>H&nbspM&nbspS<br>L&nbspo&nbspg&nbspi&nbspn</h3>
+        
+      </div>
+
+      <div class="right">
+      
+
+    <form name="signin" action="" method="post">
+      {{signin.hidden_tag()}} 
+      
+      {{signin.email.label}}
+      {{signin.email(size=35)}}
+      {% for error in signin.email.errors %}
+      <span class="error-message">{{error}}</span>
+      {%endfor%}
+      {{signin.password.label}}
+      {{signin.password(size=15)}}
+  
+      {% for error in signin.password.errors %}
+      <span class="error-message">{{error}}</span>
+      {%endfor%}
+
+      <div style="height:15px;"></div>
+        {{signin.submit() }}
+      
+      
+    </form>
+     
+
+      </div>
+
+    </div>
+   
+    
+  </div>
+</body>
+
+</html>
+

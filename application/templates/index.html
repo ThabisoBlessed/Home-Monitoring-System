@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+      <!-- ======= carousel ======= -->
+      <section class="carousel">
+           <ul class="slides">
+              <input type="radio" name="radio-buttons" id="img-1" checked />
+              <li class="slide-container">
+                <div class="slide-image">
+                  <img src="{{ url_for('static',filename ='images/4.jpg')}}">
+                </div>
+                <div class="carousel-controls">
+                  <label for="img-3" class="prev-slide">
+                    <span>&lsaquo;</span>
+                  </label>
+                  <label for="img-2" class="next-slide">
+                    <span>&rsaquo;</span>
+                  </label>
+                </div>
+              </li>
+              <input type="radio" name="radio-buttons" id="img-2" />
+              <li class="slide-container">
+                <div class="slide-image">
+                  <img src="{{ url_for('static',filename ='images/1.jpg')}}">
+                </div>
+                <div class="carousel-controls">
+                  <label for="img-1" class="prev-slide">
+                    <span>&lsaquo;</span>
+                  </label>
+                  <label for="img-3" class="next-slide">
+                    <span>&rsaquo;</span>
+                  </label>
+                </div>
+              </li>
+              <input type="radio" name="radio-buttons" id="img-3" />
+              <li class="slide-container">
+                <div class="slide-image">
+                  <img src="{{ url_for('static',filename ='images/3.jpg')}}">
+                </div>
+                <div class="carousel-controls">
+                  <label for="img-2" class="prev-slide">
+                    <span>&lsaquo;</span>
+                  </label>
+                  <label for="img-1" class="next-slide">
+                    <span>&rsaquo;</span>
+                  </label>
+                </div>
+              </li>
+              <div class="carousel-dots">
+                <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+              </div>
+            </ul>
+      </section >
+
+
+
+           <!-- ======= Why Us Section ======= -->
+           <section id="why-us" class="why-us container">
+
+            <div class="row">
+              <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="content">
+                  <h3>Why Choose HMS?</h3>
+                  <p>
+                    Home Monitoring Systems are of great importance to improving our standards of living .One of the
+                    main issues or problems we are facing globally is theft. The main aim is to protect individuals and
+                    property from hazards such as theft ,fire etc.. With the help of Monitoring Systems such problems can
+                    be mitigated or reduced as no criminal wants to be watched committing crime.
+                   </p>
+
+                  <div class="text-center">
+                    <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8 d-flex align-items-stretch">
+                <div class="icon-boxes d-flex flex-column justify-content-center">
+                  <div class="row">
+                      <div class="col-xl-4 d-flex align-items-stretch">
+                      <div class="icon-box mt-4 mt-xl-0">
+                        <i class="bx bx-receipt"></i>
+                        <h4>Merits</h4>
+                        <p>Efficient resource utilization ,minimizing human effort developments of artificial intelligence through
+                            IOT ,save time . Improves security.</p>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 d-flex align-items-stretch">
+                        <div class="icon-box mt-4 mt-xl-0">
+                        <i class="bx bx-cube-alt"></i>
+                        <h4>Demerits</h4>
+                        <p>➢ Wrong data reading by IOT devices
+                            <br>
+                        ➢ Malfunctioning of car motors
+                            <br>
+                             ➢ Recording clients activity without  permission ,violation of  privacy
+                          <br>
+                            ➢ Threats of stolen password</p>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 d-flex align-items-stretch">
+                      <div class="icon-box mt-4 mt-xl-0">
+                        <i class="bx bx-images"></i>
+                        <h4>Vision</h4>
+                        <p>
+                        Create a leading, patient-centered comprehensive healthcare delivery system and have achieved outstanding achievements in patient care and medical education. </p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div><!-- End .content-->
+              </div>
+            </div>
+          </div>
+        </section><!-- End Why Us Section -->
+
+
+
+{% endblock %}
+

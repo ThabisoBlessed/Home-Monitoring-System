@@ -1,0 +1,140 @@
+<html>
+<head>
+    <title>Home Monitoring System</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static',filename ='images/favicon.ico')}}" >
+    <link rel="stylesheet" href="{{ url_for('static',filename ='css/style.css')}}"/>
+    
+</head>
+<style>
+
+
+.svg-icon {
+  width: 3em;
+  height: 2em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #4691f6;
+}
+
+.svg-icon circle {
+  stroke: #0000;
+  stroke-width: 1;
+}
+</style>
+<body style=" width: 100%;height: 100vh;margin: 0;">
+    
+    <div class="maincont">
+      <div class="left-area">
+        <div class="app-name">{{username}}&nbsp;</div>
+
+        <a href="{{url_for('chat')}}" class="item-link" id="pageLink">
+          <svg   class="svg-icon" viewBox="0 0 20 20">
+            <path d="M17.659,3.681H8.468c-0.211,0-0.383,0.172-0.383,0.383v2.681H2.341c-0.21,0-0.383,0.172-0.383,0.383v6.126c0,0.211,0.172,0.383,0.383,0.383h1.532v2.298c0,0.566,0.554,0.368,0.653,0.27l2.569-2.567h4.437c0.21,0,0.383-0.172,0.383-0.383v-2.681h1.013l2.546,2.567c0.242,0.249,0.652,0.065,0.652-0.27v-2.298h1.533c0.211,0,0.383-0.172,0.383-0.382V4.063C18.042,3.853,17.87,3.681,17.659,3.681 M11.148,12.87H6.937c-0.102,0-0.199,0.04-0.27,0.113l-2.028,2.025v-1.756c0-0.211-0.172-0.383-0.383-0.383H2.724V7.51h5.361v2.68c0,0.21,0.172,0.382,0.383,0.382h2.68V12.87z M17.276,9.807h-1.533c-0.211,0-0.383,0.172-0.383,0.383v1.755L13.356,9.92c-0.07-0.073-0.169-0.113-0.27-0.113H8.851v-5.36h8.425V9.807z"></path>
+          </svg>
+        </a>
+        
+        <a href="{{url_for('sensor')}}" class="item-link" id="pageLink">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-hard-drive" viewBox="0 0 24 24">
+            <defs />
+            <path d="M22 12H2M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11zM6 16h.01M10 16h.01" />
+          </svg>
+        </a>
+        <a href="{{url_for('settings')}}" class="item-link" id="pageLink">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-settings" viewBox="0 0 24 24">
+            <defs />
+            <circle cx="12" cy="12" r="3" />
+            <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
+          </svg>
+        </a>
+        <a href="{{url_for('logout')}}" class="item-link" id="pageLink">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-log-out" viewBox="0 0 24 24">
+            <defs />
+            <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9" />
+          </svg>
+        </a>
+      </div>
+      <div class="main-area">
+          
+        <section class="content-section">
+            <img src="{{ url_for('videopage_feed') }}" width="100%" height="92%"> 
+        </section>
+
+      </div>
+
+       <div class="width-50 right-container ">
+ 
+          
+				<div style="margin-top:6rem;">
+          
+				<a href="#" id="test" class="button">STRAIGHT</a> 
+				</div>
+				<div class="d-flex">
+					<a href="#" id="test1" class="button">LEFT</a> 
+					<a href="#" id="test2" class="button">STOP</a> 
+					<a href="#" id="test3" class="button">RIGHT</a> 
+				</div>
+				<div>
+					<a href="" id="test4" class="button">REVERSE</a>
+				</div>
+			</div>
+     
+     
+    </div>
+    
+    <script type=text/javascript>
+            $(function() {
+              $('a#test').on('click', function(e) {
+                e.preventDefault()
+                $.getJSON('/forward',
+                    function(data) {
+                  //do nothing
+                });
+                return false;
+              });
+
+              $('a#test1').on('click', function(e) {
+                e.preventDefault()
+                $.getJSON('/left',
+                    function(data) {
+                  //do nothing
+                });
+                return false;
+              });
+              $('a#test2').on('click', function(e) {
+                e.preventDefault()
+                $.getJSON('/stop',
+                    function(data) {
+                  //do nothing
+                });
+                return false;
+              });
+
+              $('a#test3').on('click', function(e) {
+                e.preventDefault()
+                $.getJSON('/right',
+                    function(data) {
+                  //do nothing
+                });
+                return false;
+              });
+
+
+              $('a#test4').on('click', function(e) {
+                e.preventDefault()
+                $.getJSON('/reverse',
+                    function(data) {
+                  //do nothing
+                });
+                return false;
+              });
+            });
+    </script>
+   
+</body>
+</html>

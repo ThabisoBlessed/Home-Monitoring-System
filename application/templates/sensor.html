@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+    <html lang="en" >
+    <head>
+      <meta charset="UTF-8">
+      <title>Home Monitoring System</title>
+      <link rel="shortcut icon" href="{{ url_for('static',filename ='images/favicon.ico')}}" >
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="{{ url_for('static',filename ='css/store.css')}}"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+<style>
+html {
+  font-family: 'Gentium Book Basic', serif;
+  background: #2C264C;  
+}
+
+.nav-wrapper{
+  background-color: #006400;
+}
+.links li + li {
+  box-shadow: inset 0 0.15rem 0.1rem -0.15rem rgba(0, 0, 0, 0.5);
+  border: 5px;
+}
+
+.links a {
+  color: #fff;
+  display: block;
+  font-size: 1.5rem;
+  letter-spacing: 0.01em;
+  padding: 2.27rem 0;
+  text-decoration: none;
+  transition: opacity 0.075s ease-in-out;
+}
+
+.links a em {
+  font-size: .9rem;
+  font-style: normal;
+  opacity: .6;
+}
+
+.links a:hover {
+  background-color: #006400;
+  box-shadow: inset 0 0 0 0.15rem rgba(0, 0, 0, 0.15);
+}
+
+.links a:active {
+  background-color: #006400;
+  opacity: 0.75;
+}
+
+.links li:hover, .links li:hover + li {
+  margin: 0 -0.75rem;
+}
+
+.links li:hover a, .links li:hover + li a {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+
+      </style>
+    
+    <div class="navbar-fixed">
+      <nav id="nav_f" class="deep-orange accent-4" role="navigation">
+          <div class="nav-wrapper">
+            <div>
+            <ul class="left hide-on-med-and-down">
+              <li><a class="waves-effect waves-light btn  grey darken-3"  href="{{url_for('video')}}">HOME</a></li>
+              
+                      
+              </div>           
+
+            </ul>
+    
+          </div>
+        </nav>
+        </div>
+      
+    
+    <div class="row ">
+      <div class="side">
+        <div class="col s12 m4 l3 grey darken-3">
+        <ul class="links">
+          <li><i class="material-icons left deep-orange accent-4">network_check</i><a href="showcase/dynamic-lights/">TEMPERATURE</a></li>
+          <li><i class="material-icons left yellow accent-4" >graphic_eq</i><a href="#">PRESSURE</a></li>
+          <li><i class="material-icons left  blue accent-4">show_chart</i><a href="#">RATES</a></li>
+          <li><i class="material-icons left deep-orange lighten-1">casino</i><a href="#">SENSORS</a></li>
+         <li><i class="material-icons left cyan darken-1">settings</i><a href="{{url_for('settings')}}">SETTINGS</a></li>
+        </div>
+      </div>
+      <br></br>
+      <div class="col s12 m8 l9">
+        <div class="row">
+      </nav> 
+          <div class="col s4">
+            <div class="card grey darken-3">
+              <div class="card-content white-text">
+                <span class="card-title">Temperature</span>
+                <i class="fa fa-thermometer-three-quarters" style="font-size: 100px"></i>
+              
+              </div>
+            
+            </div>
+          </div>
+    
+          <div class="col s4">
+            <div class="card grey darken-3">
+              <div class="card-content white-text">
+                <span class="card-title">Logs</span>
+              
+              </div>
+           
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col s4">
+              <div class="card grey darken-3">
+                <div class="card-content white-text">
+                  <span class="card-title">Rates</span>
+                 
+                </div>
+              
+              </div>
+            </div>
+    
+            <div class="col s4">
+              <div class="card grey darken-3">
+                <div class="card-content white-text">
+                  <span class="card-title">Tanks</span>
+                
+                </div>
+              
+              </div>
+            </div>
+    
+            <div class="row">
+              <div class="col s4">
+                <div class="card grey darken-3">
+                  <div class="card-content white-text">
+                    <span class="card-title">Photos</span>
+                    <a href="{{url_for('display')}}"><i class="fas fa-image" style="font-size: 100px"></i></a>
+                    
+                  </div>
+               
+                </div>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+
+    
+    </body>
+    </html>
+    

@@ -1,0 +1,141 @@
+@font-face {
+	font-family: 'Bellota-LightItalic';
+	src: url('./fonts/Bellota-Light.otfz');
+}
+@font-face {
+	font-family: 'Bellota-BoldItalic';
+	src: url('./fonts/Bellota-BoldItalic.otf');
+}
+*{
+  padding:0;
+  margin:0;
+  font-family: 'Bellota-BoldItalic';
+  user-select:none;
+}
+.contain{
+  width:auto;
+  height:100vh;
+  background-color: #112B3C;
+  
+}
+
+.main{
+  background:none;
+  width:500px;
+  height:21rem;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  border-radius:5px;
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-template-rows:100%;
+  backdrop-filter: blur(2px);
+  box-shadow:0px 0px 10px 3px #FFFFFF;
+}
+.left{
+ border-radius:5px 0 0 5px; background:rgba(255,255,255,0.4);
+  opacity:1;
+}
+h3{
+  font-family: 'Bellota-BoldItalic';
+  position:absolute;
+  top:40%;
+  left:21%;
+  transform:translate(-30%,-50%);
+  font-size:20px;
+  color:white;
+  font-weight:300;
+  background:#112B3C;
+  border-radius: 37% 63% 30% 70% / 62% 42% 58% 38%;
+  height:80px;
+  width:120px;
+  text-align:center;
+  padding-top:40px;
+  animation:border;
+  animation-duration:8s;
+  animation-iteration-count:infinite;
+}
+@keyframes border{
+  0%{
+    border-radius:37% 63% 30% 70% / 62% 42% 58% 38%;
+  }
+  30%{
+    border-radius:58% 42% 44% 56% / 38% 70% 30% 62%;
+  }
+  50%{
+    border-radius:72% 28% 88% 12% / 25% 45% 55% 75%;
+  }
+  70%{
+    border-radius:36% 64% 37% 63% / 52% 64% 36% 48%;
+  }
+  90%{
+    border-radius:70% 30% 62% 38% / 26% 47% 53% 74%;
+  }
+}
+
+.right{
+  border-radius:0 5px 5px 0; 
+
+}
+input{
+  font-family: 'Bellota-BoldItalic';
+  margin-left:22px;
+  width:80%;
+  height:29px;
+  border-radius:5px;
+  border:none;
+  outline:none;
+  box-shadow:1.1px 1.2px 6px 1px gray;
+  padding:5px;
+  transition:0.3s;
+}
+
+
+.txt{
+  margin-top:50px;
+}
+.pass{
+  margin-top:20px;
+}
+.email{
+  margin-top:20px;
+}
+button{
+  font-family: 'Bellota-BoldItalic';
+  cursor:pointer;
+  
+}
+#sub{
+  margin-top:30px;
+  margin-left:1.5rem;
+  border:none;
+  border-radius: 4px;
+  color: #FFFFFF;
+  background-color: #112B3C;
+  font-size:16px;
+  padding:5px;
+  transition:0.3s;
+}
+.rest{
+  color: #FFFFFF;
+  float:right;
+  margin-top:30px;
+  margin-right:1.6rem;
+  border:none;
+  border-radius: 4px;
+  background-color: #112B3C;
+  font-size:16px;
+  padding:5px;
+  transition:0.3s;
+}
+.rest:hover{
+  border-bottom:1px solid green;
+}
+#sub:hover{
+  border-bottom:1px solid green;
+}
+input:focus{
+  border-bottom:3px solid green;
+}

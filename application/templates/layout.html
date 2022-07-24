@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Monitoring System</title>
+    
+    <link rel="shortcut icon" href="{{ url_for('static',filename ='images/favicon.ico')}}" >
+    
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename ='css/styles.css')}}"/>
+    <link rel="stylesheet" href="{{ url_for('static',filename ='css/bootstrap.css')}}" crossorigin="anonymous">
+    
+</head>
+{% include "includes/header.html" %}
+
+<body>
+    
+    
+    <div  class="wrapper ">
+    
+
+        {% block content %}
+        {% endblock %}
+        
+        
+    </div>
+
+</body>
+{% include "includes/footer.html" %}
+</html>

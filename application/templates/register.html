@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Monitoring System</title>
+    
+    <link rel="shortcut icon" href="{{ url_for('static',filename ='images/favicon.ico')}}" >
+    <link rel="stylesheet" href="{{ url_for('static',filename ='css/bootstrap.css')}}" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename ='css/styles.css')}}"/>
+    
+</head>
+
+<body>
+  <div class=" background"> 
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{category}}">
+        <p>{{ message }}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class='boxr'>
+        
+          <div class='form'>
+      
+            <form name="signup" action="" method="POST" novalidate>
+              {{signup.hidden_tag()}}
+                <div class='form-box'>
+                {{signup.accid.label}}
+                {{signup.accid}}
+
+                {% for error in signup.accid.errors %}
+                <span class="error-message">{{error}}</span>
+                {%endfor%}
+              </div>
+
+              <div class='form-box'>
+                {{signup.fname.label}}
+                {{signup.fname}}
+
+                {% for error in signup.fname.errors %}
+                <span class="error-message">{{error}}</span>
+                {%endfor%}
+              </div>
+
+              <div class='form-box'>
+                {{signup.lname.label}}
+                {{signup.lname}}
+
+                {% for error in signup.lname.errors %}
+                <span class="error-message">{{error}}</span>
+                {%endfor%}
+              </div>
+              <div class='form-box'>
+                {{signup.email.label}}
+                {{signup.email(size=35)}}
+                {% for error in signup.email.errors %}
+                <span class="error-message">{{error}}</span>
+                {%endfor%}
+              </div>
+            
+              <div class='form-box'>
+                {{signup.password.label}}
+                {{signup.password(size=15)}}
+
+                {% for error in signup.password.errors %}
+                <span class="error-message">{{error}}</span>
+                {%endfor%}
+            
+
+              </div>
+              <div class='form-box'>
+                {{signup.password2.label}}
+                {{signup.password2(size=15)}}
+
+                {% for error in signup.password2.errors %}
+                <span class="error-message">{{error}}</span>
+                {%endfor%}
+            
+
+      
+              </div>
+              {{signup.submit() }}
+            </form>
+      
+      
+        </div>
+      </div>
+    </div>
+</body>
+{% include "includes/footer.html" %}
+</html>

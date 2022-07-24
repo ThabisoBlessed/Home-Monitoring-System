@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    <title>Home Monitoring System</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static',filename ='images/favicon.ico')}}" >
+    <link rel="stylesheet" href="{{ url_for('static',filename ='css/bootstrap.css')}}" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename ='css/styles.css')}}"/>
+    
+</head>
+<script>
+
+        $(document).ready(function(){
+
+        $("#darkmode").click(function() {
+            $('#darkmode').css('display','none');
+            $('#lightmode').css('display','block');
+            $('.phone_container').css('background-color','#eaebf5');
+            $('.call_icons').css('background-color','#fff');
+            $('.chat_section').css('background-color','#fff');
+        });
+
+        $("#lightmode").click(function() {
+            $('#darkmode').css('display','block');
+            $('#lightmode').css('display','none');
+            $('.phone_container').css('background-color','#203239');
+            $('.call_icons').css('background-color','#11324D');
+            $('.chat_section').css('background-color','#11324D');
+        });
+        });
+
+</script>
+<body >
+    <div class="phone_container">
+    
+
+    <div class="call_icons">
+        <div class="nav-link">
+            <i class="fa fa-sun-o fa-2x"id="lightmode" ></i>
+            <i class="fa fa-moon-o fa-2x" id="darkmode"></i>
+            <a href=""><i class="fa fa-home fa-2x"></i></a>
+            <a href=""><i class="fa fa-users fa-2x"></i></a>
+            <a href=""><i class="fa fa-sign-out fa-2x"></i></a>
+
+
+        </div>
+ 
+        
+          
+    </div>
+
+    <div class="call_area">
+        <div class="friend_camera">
+
+        </div>
+    </div>
+
+    <div class="chat_section">
+             <input type="text" placeholder="text" class="input">
+            <button>Send</button>
+    </div>
+    </div>
+
+    </div>
+
+</body>
+</html>
